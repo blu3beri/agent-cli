@@ -28,7 +28,7 @@ pub enum CloudAgentAfjRestVersion {
 impl std::fmt::Display for CloudAgentAfjRestVersion {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let v = match self {
-            CloudAgentAfjRestVersion::ZeroEightZero => "0.8.0",
+            Self::ZeroEightZero => "0.8.0",
         };
         write!(f, "{}", v)
     }

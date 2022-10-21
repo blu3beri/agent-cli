@@ -80,7 +80,7 @@ pub async fn register() -> Result<()> {
                     Commands::Oob(options) => parse_oob_args(options, agent).await,
                     Commands::Webhook(_) => parse_webhook_args(agent).await,
                     Commands::Automate(options) => parse_automation_args(options, agent).await,
-                    _ => Err(
+                    Commands::Configuration(_) => Err(
                         Error::SubcommandNotRegisteredForAgent(cli.commands.into(), "aca-py")
                             .into(),
                     ),
